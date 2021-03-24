@@ -1,1 +1,1 @@
-console.log("Hello World!");
+(()=>{"use strict";const o=function(){console.log("Render Home")};console.log("Hello World!"),o()})();
