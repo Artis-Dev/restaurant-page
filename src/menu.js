@@ -1,13 +1,13 @@
 const menu = (() => {
   const content = document.querySelector('#content');
 
-  function renderMenu() {
+  function render() {
     console.log('Render Menu');
     content.textContent = '';
   }
 
   return {
-    renderMenu,
+    render,
   };
 })();
 

@@ -3,7 +3,6 @@ import menu from './menu';
 import contacts from './contacts';
 
 const render = (() => {
-  console.log('Hello World!');
   const header = document.querySelector('header');
   const footer = document.querySelector('footer');
 
@@ -20,7 +19,7 @@ const render = (() => {
     header.appendChild(nav);
     // Menu items
     const navHome = document.createElement('a');
-    navHome.classList.add('nav-link');
+    navHome.classList.add('nav-link', 'current');
     navHome.id = 'home';
     navHome.setAttribute('href', '#');
     navHome.textContent = 'HOME';
@@ -60,17 +59,33 @@ const render = (() => {
     credits.appendChild(creditSource);
   }
 
-  renderHeader();
-  home.renderHome();
-  renderFooter();
+  function buttonsHandler() {
+    const menuItems = document.querySelectorAll('.navigation a');
+    document.addEventListener('click', (event) => {
+      if (event.target.id === 'home') {
+        home.render();
+        menuItems.forEach((element) => {
+          element.classList.remove('current');
+        });
+        event.target.classList.add('current');
+      } else if (event.target.id === 'menu' || event.target.className === 'home-button') {
+        menu.render();
+        menuItems.forEach((element) => {
+          element.classList.remove('current');
+        });
+        menuItems[1].classList.add('current');
+      } else if (event.target.id === 'contacts') {
+        contacts.render();
+        menuItems.forEach((element) => {
+          element.classList.remove('current');
+        });
+        event.target.classList.add('current');
+      }
+    });
+  }
 
-  document.addEventListener('click', (event) => {
-    if (event.target.id === 'home') {
-      home.renderHome();
-    } else if (event.target.id === 'menu' || event.target.className === 'home-button') {
-      menu.renderMenu();
-    } else if (event.target.id === 'contacts') {
-      contacts.renderContacts();
-    }
-  });
+  renderHeader();
+  home.render();
+  renderFooter();
+  buttonsHandler();
 })();

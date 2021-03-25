@@ -1,13 +1,13 @@
 const contacts = (() => {
   const content = document.querySelector('#content');
 
-  function renderContacts() {
+  function render() {
     console.log('Render Contacts');
     content.textContent = '';
   }
 
   return {
-    renderContacts,
+    render,
   };
 })();
 

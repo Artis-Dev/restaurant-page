@@ -27,6 +27,7 @@ header .navigation {
 }
 
 .nav-link {
+  padding-bottom: 3px;
   font-family: 'Lora', serif;
   font-size: 20px;
   font-weight: 500;
@@ -38,13 +39,17 @@ header .navigation {
   margin-right: 40px;
 }
 
+.current {
+  border-bottom: 2px solid #000;
+}
+
 /* Content */
 #content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 218px);
+  height: calc(100vh - 223px);
   margin: 0 50px;
   padding: 25px;
   background: url(../background.jpg) no-repeat fixed center;

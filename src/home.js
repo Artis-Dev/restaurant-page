@@ -1,7 +1,7 @@
 const home = (() => {
   const content = document.querySelector('#content');
 
-  function renderHome() {
+  function render() {
     console.log('Render Home');
     content.textContent = '';
     const headline = document.createElement('h1');
@@ -22,7 +22,7 @@ const home = (() => {
   }
 
   return {
-    renderHome,
+    render,
   };
 })();
 
