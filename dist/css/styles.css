@@ -72,6 +72,7 @@ header .navigation {
   border: 1px solid #FFF;
   text-decoration: none;
   transition: all .3s;
+  cursor: pointer;
 }
 
 .home-button:hover {
