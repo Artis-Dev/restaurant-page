@@ -3,6 +3,8 @@ const home = (() => {
 
   function render() {
     console.log('Render Home');
+    content.classList.remove('background');
+    content.classList.add('home');
     content.textContent = '';
     const headline = document.createElement('h1');
     headline.classList.add('home-headline');
