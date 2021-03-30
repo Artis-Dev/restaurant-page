@@ -8,7 +8,7 @@ const menu = (() => {
     },
     {
       text: 'VEGAN',
-      icon: 'far fa-leaf-heart vegan',
+      icon: 'far fa-leaf vegan',
     },
     {
       text: 'ALCO',
@@ -26,7 +26,7 @@ const menu = (() => {
       {
         name: 'Marinara 7 €',
         description: 'Tomatoes, garlic, oregano, olive oil.',
-        badges: ['far fa-leaf-heart vegan'],
+        badges: ['far fa-leaf vegan'],
       },
       {
         name: 'Quattro Formaggi 10 €',
@@ -36,14 +36,14 @@ const menu = (() => {
       {
         name: 'Bianca 5 €',
         description: 'Olive oil, salt, rosemary sprigs.',
-        badges: ['far fa-leaf-heart vegan'],
+        badges: ['far fa-leaf vegan'],
       },
     ],
     [
       {
         name: 'Panzanella 6 €',
         description: 'Bread, red onions, tomatoes, olive oil, vinegar, spices.',
-        badges: ['far fa-leaf-heart vegan'],
+        badges: ['far fa-leafvegan'],
       },
       {
         name: 'Caprese 5 €',
@@ -69,7 +69,7 @@ const menu = (() => {
       },
       {
         name: 'Herbal Tea 2 €',
-        description: 'Warming...',
+        description: 'Warming tea for rainy days.',
         badges: [],
       },
     ],
@@ -82,7 +82,7 @@ const menu = (() => {
       {
         name: 'Powerball 2 €',
         description: 'Sweet balls full of energy.',
-        badges: ['far fa-leaf-heart vegan'],
+        badges: ['far fa-leaf vegan'],
       },
     ],
   ];
@@ -129,10 +129,11 @@ const menu = (() => {
         const pizzaInfoString = document.createTextNode(' - 35CM');
         pizzaInfo.appendChild(pizzaInfoString);
       }
-      // Menu items
+      // Grid for menu items
       const menuGrid = document.createElement('div');
       menuGrid.classList.add('menu-grid');
       content.appendChild(menuGrid);
+      // Menu items
       for (let j = 0; j < food[i].length; j += 1) {
         const menuItem = document.createElement('div');
         menuItem.classList.add('menu-item');

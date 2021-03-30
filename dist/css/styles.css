@@ -81,7 +81,7 @@ header .navigation {
   margin-top: 25px;
   font-size: 20px;
   color: #FFF;
-  border: 1px solid #FFF;
+  border: 2px solid #FFF;
   text-decoration: none;
   transition: all .3s;
   cursor: pointer;
@@ -93,10 +93,32 @@ header .navigation {
   transition: all .3s;
 }
 
-.sep {
+.home-sep {
   border-bottom: 1px solid #FFF;
   width: 50px;
   margin: 25px 0;
+}
+
+.home-badges {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 0 0px;
+}
+
+.home-badges i {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.home-badges p {
+  color: #FFF;
+  font-weight: 700;
+  margin: 0;
+}
+
+.home-badges p:not(:last-child) {
+  margin-right: 25px;
 }
 
 /* Menu */
