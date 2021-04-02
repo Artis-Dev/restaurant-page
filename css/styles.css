@@ -8,9 +8,11 @@ h1, h2, h3 {
   margin: 0;
 }
 
-h1 {
-  font-size: 58px;
-}
+h1 { font-size: 58px; }
+
+h2 { font-size: 32px; }
+
+h3 { font-size: 22px; }
 
 /* Header */
 header {
@@ -20,6 +22,7 @@ header {
 
 .logo {
   margin: 25px 0;
+  cursor: pointer;
 }
 
 header .navigation {
@@ -50,7 +53,7 @@ header .navigation {
   margin: 0 50px;
   padding: 25px;
   text-align: center;
-  background: url(../background.jpg) no-repeat fixed center;
+  background: url(../img/background.jpg) no-repeat fixed center;
   background-size: cover;
 }
 
@@ -185,6 +188,69 @@ header .navigation {
   margin: 10px 0 0;
   padding-top: 5px;
   border-top: 1px solid rgba(0,0,0,.2);
+}
+
+/* Contacts */
+.contacts-headline {
+  margin-bottom: 25px;
+}
+
+.contacts-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contacts-flex > div {
+  background-color: #FFF;
+  flex: 1 1 705px;
+  max-width: 705px;
+  padding: 25px;
+}
+
+.contacts-flex h2 {
+  margin-bottom: 25px;
+}
+
+.contacts-flex h3:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.contacts-list {
+  text-align: left;
+}
+
+.contacts-list a {
+  color: #000;
+}
+
+.contacts-map {
+  width: 100%;
+  height: auto;
+}
+
+.contacts-working-hours {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.contacts-working-hours div:first-child {
+  width: 100px;
+}
+
+.contacts-working-hours div:last-child {
+  width: 100px;
+}
+
+.contacts-working-hours p {
+  margin: 10px 0;
+}
+
+.contacts-working-hours p:first-child {
+  margin-top: 0px;
 }
 
 /* footer */
