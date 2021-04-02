@@ -10,7 +10,7 @@ const render = (() => {
     // Logo
     const logo = document.createElement('img');
     logo.classList.add('logo');
-    logo.setAttribute('src', './logo.png');
+    logo.setAttribute('src', './img/logo.png');
     logo.setAttribute('alt', 'Pizzeria logo');
     header.appendChild(logo);
     // Navigation
@@ -61,25 +61,28 @@ const render = (() => {
 
   function buttonsHandler() {
     const menuItems = document.querySelectorAll('.navigation a');
+    const menuItemHome = menuItems[0];
+    const menuItemMenu = menuItems[1];
+    const menuItemContacts = menuItems[2];
     document.addEventListener('click', (event) => {
-      if (event.target.id === 'home') {
+      if (event.target.id === 'home' || event.target.className === 'logo') {
         home.render();
         menuItems.forEach((element) => {
           element.classList.remove('current');
         });
-        event.target.classList.add('current');
+        menuItemHome.classList.add('current');
       } else if (event.target.id === 'menu' || event.target.className === 'home-button') {
         menu.render();
         menuItems.forEach((element) => {
           element.classList.remove('current');
         });
-        menuItems[1].classList.add('current');
+        menuItemMenu.classList.add('current');
       } else if (event.target.id === 'contacts') {
         contacts.render();
         menuItems.forEach((element) => {
           element.classList.remove('current');
         });
-        event.target.classList.add('current');
+        menuItemContacts.classList.add('current');
       }
     });
   }

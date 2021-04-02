@@ -43,7 +43,7 @@ const menu = (() => {
       {
         name: 'Panzanella 6 €',
         description: 'Bread, red onions, tomatoes, olive oil, vinegar, spices.',
-        badges: ['far fa-leafvegan'],
+        badges: ['far fa-leaf vegan'],
       },
       {
         name: 'Caprese 5 €',
