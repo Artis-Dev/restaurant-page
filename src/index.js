@@ -6,6 +6,8 @@ const render = (() => {
   const header = document.querySelector('header');
   const footer = document.querySelector('footer');
 
+  const navItems = ['home', 'menu', 'contacts'];
+
   function renderHeader() {
     // Logo
     const logo = document.createElement('img');
@@ -18,24 +20,14 @@ const render = (() => {
     nav.classList.add('navigation');
     header.appendChild(nav);
     // Menu items
-    const navHome = document.createElement('a');
-    navHome.classList.add('nav-link', 'current');
-    navHome.id = 'home';
-    navHome.setAttribute('href', '#');
-    navHome.textContent = 'HOME';
-    nav.appendChild(navHome);
-    const navMenu = document.createElement('a');
-    navMenu.classList.add('nav-link');
-    navMenu.id = 'menu';
-    navMenu.setAttribute('href', '#');
-    navMenu.textContent = 'MENU';
-    nav.appendChild(navMenu);
-    const navContacts = document.createElement('a');
-    navContacts.classList.add('nav-link');
-    navContacts.id = 'contacts';
-    navContacts.setAttribute('href', '#');
-    navContacts.textContent = 'CONTACTS';
-    nav.appendChild(navContacts);
+    for (let i = 0; i < navItems.length; i += 1) {
+      const navItem = document.createElement('a');
+      navItem.id = navItems[i];
+      navItem.classList.add('nav-link');
+      navItem.setAttribute('href', '#');
+      navItem.textContent = navItems[i].toUpperCase();
+      nav.appendChild(navItem);
+    }
   }
 
   function renderFooter() {

@@ -17,7 +17,6 @@ const home = (() => {
   ];
 
   function render() {
-    console.log('Render Home');
     content.classList.remove('background');
     content.classList.add('home');
     content.textContent = '';
@@ -40,21 +39,21 @@ const home = (() => {
     button.classList.add('home-button');
     button.textContent = 'MENU';
     content.appendChild(button);
-    // Badges wrapper wip
+    // Badges wrapper
     const badgesWrapper = document.createElement('div');
     badgesWrapper.classList.add('home-badges');
     content.appendChild(badgesWrapper);
-    // Badges wip
+    // Badges
     for (let i = 0; i < badges.length; i += 1) {
-      const menuInfoItem = document.createElement('p');
-      badgesWrapper.appendChild(menuInfoItem);
-      const menuInfoItemIcon = document.createElement('i');
-      menuInfoItemIcon.className = badges[i].icon;
-      menuInfoItem.appendChild(menuInfoItemIcon);
-      const menuInfoBr = document.createElement('br');
-      menuInfoItem.appendChild(menuInfoBr);
-      const menuInfoString = document.createTextNode(badges[i].text);
-      menuInfoItem.appendChild(menuInfoString);
+      const badge = document.createElement('p');
+      badgesWrapper.appendChild(badge);
+      const badgeIcon = document.createElement('i');
+      badgeIcon.className = badges[i].icon;
+      badge.appendChild(badgeIcon);
+      const badgeBr = document.createElement('br');
+      badge.appendChild(badgeBr);
+      const badgeText = document.createTextNode(badges[i].text);
+      badge.appendChild(badgeText);
     }
   }
 

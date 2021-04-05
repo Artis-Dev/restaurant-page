@@ -4,8 +4,8 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Lora', serif;
   margin: 0;
+  font-family: 'Lora', serif;
 }
 
 h1 { font-size: 58px; }
@@ -126,23 +126,23 @@ header .navigation {
 
 /* Menu */
 
-.menu-info {
+.menu-legend {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 25px 0;
 }
 
-.menu-info i {
+.menu-legend i {
   font-size: 28px;
   margin-bottom: 10px;
 }
 
-.menu-info p {
+.menu-legend p {
   margin: 0;
 }
 
-.menu-info p:not(:last-child) {
+.menu-legend p:not(:last-child) {
   margin-right: 25px;
 }
 

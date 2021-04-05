@@ -15,7 +15,9 @@ const menu = (() => {
       icon: 'far fa-percent alco',
     },
   ];
+
   const categories = ['Pizza', 'Salads', 'Drinks', 'Desserts'];
+
   const food = [
     [
       {
@@ -88,7 +90,6 @@ const menu = (() => {
   ];
 
   function render() {
-    console.log('Render Menu');
     content.textContent = '';
     content.classList.remove('home');
     content.classList.add('background');
@@ -98,20 +99,20 @@ const menu = (() => {
     headline.textContent = 'MENU';
     content.appendChild(headline);
     // Menu info
-    const menuInfo = document.createElement('div');
-    menuInfo.classList.add('menu-info');
-    content.appendChild(menuInfo);
+    const menuLegend = document.createElement('div');
+    menuLegend.classList.add('menu-legend');
+    content.appendChild(menuLegend);
     // Menu info items
     for (let l = 0; l < legend.length; l += 1) {
-      const menuInfoItem = document.createElement('p');
-      menuInfo.appendChild(menuInfoItem);
-      const menuInfoItemIcon = document.createElement('i');
-      menuInfoItemIcon.className = legend[l].icon;
-      menuInfoItem.appendChild(menuInfoItemIcon);
-      const menuInfoBr = document.createElement('br');
-      menuInfoItem.appendChild(menuInfoBr);
-      const menuInfoString = document.createTextNode(legend[l].text);
-      menuInfoItem.appendChild(menuInfoString);
+      const menuLegendItem = document.createElement('p');
+      menuLegend.appendChild(menuLegendItem);
+      const menuLegendItemIcon = document.createElement('i');
+      menuLegendItemIcon.className = legend[l].icon;
+      menuLegendItem.appendChild(menuLegendItemIcon);
+      const menuLegendBr = document.createElement('br');
+      menuLegendItem.appendChild(menuLegendBr);
+      const menuLegendText = document.createTextNode(legend[l].text);
+      menuLegendItem.appendChild(menuLegendText);
     }
     // Menu categories
     for (let i = 0; i < categories.length; i += 1) {
@@ -126,8 +127,8 @@ const menu = (() => {
         const pizzaInfoIcon = document.createElement('i');
         pizzaInfoIcon.classList.add('far', 'fa-pizza');
         pizzaInfo.appendChild(pizzaInfoIcon);
-        const pizzaInfoString = document.createTextNode(' - 35CM');
-        pizzaInfo.appendChild(pizzaInfoString);
+        const pizzaInfoText = document.createTextNode(' - 35CM');
+        pizzaInfo.appendChild(pizzaInfoText);
       }
       // Grid for menu items
       const menuGrid = document.createElement('div');
