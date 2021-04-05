@@ -54,7 +54,7 @@ const contacts = (() => {
     const sep2 = document.createTextNode(' / ');
     contactsListFollow.appendChild(sep2);
     const contactsListFollowReddit = document.createElement('a');
-    contactsListFollowReddit.setAttribute('href', 'https://facebook.com/pizzeria');
+    contactsListFollowReddit.setAttribute('href', 'https://reddit/r/pizza');
     contactsListFollowReddit.setAttribute('target', '_blank');
     contactsListFollowReddit.textContent = 'Reddit';
     contactsListFollow.appendChild(contactsListFollowReddit);
