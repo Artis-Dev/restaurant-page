@@ -21,7 +21,7 @@ const menu = (() => {
   const food = [
     [
       {
-        name: 'Margherita  8.5 €',
+        name: 'Margherita 8.5 €',
         description: 'Tomatoes, mozzarella, basil, olive oil.',
         badges: ['far fa-crown top-pick'],
       },

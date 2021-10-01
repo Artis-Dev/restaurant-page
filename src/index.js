@@ -56,24 +56,23 @@ const render = (() => {
     const menuItemHome = menuItems[0];
     const menuItemMenu = menuItems[1];
     const menuItemContacts = menuItems[2];
+
+    function removeCurrentClass() {
+      menuItems.forEach((element) => {
+        element.classList.remove('current');
+      });
+    }
+
     document.addEventListener('click', (event) => {
+      removeCurrentClass();
       if (event.target.id === 'home' || event.target.className === 'logo') {
         home.render();
-        menuItems.forEach((element) => {
-          element.classList.remove('current');
-        });
         menuItemHome.classList.add('current');
       } else if (event.target.id === 'menu' || event.target.className === 'home-button') {
         menu.render();
-        menuItems.forEach((element) => {
-          element.classList.remove('current');
-        });
         menuItemMenu.classList.add('current');
       } else if (event.target.id === 'contacts') {
         contacts.render();
-        menuItems.forEach((element) => {
-          element.classList.remove('current');
-        });
         menuItemContacts.classList.add('current');
       }
     });
