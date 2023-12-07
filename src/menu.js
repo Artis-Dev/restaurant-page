@@ -142,7 +142,7 @@ const menu = (() => {
         const foodName = document.createElement('h3');
         foodName.textContent = food[i][j].name;
         menuItem.appendChild(foodName);
-        if (food[i][j].badges !== []) {
+        if (food[i][j].badges.length > 0) {
           for (let k = 0; k < food[i][j].badges.length; k += 1) {
             const badge = document.createElement('i');
             badge.className = food[i][j].badges[k];

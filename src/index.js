@@ -57,6 +57,8 @@ const render = (() => {
     const menuItemMenu = menuItems[1];
     const menuItemContacts = menuItems[2];
 
+    menuItemHome.classList.add('current');
+
     function removeCurrentClass() {
       menuItems.forEach((element) => {
         element.classList.remove('current');
@@ -64,14 +66,16 @@ const render = (() => {
     }
 
     document.addEventListener('click', (event) => {
-      removeCurrentClass();
       if (event.target.id === 'home' || event.target.className === 'logo') {
+        removeCurrentClass();
         home.render();
         menuItemHome.classList.add('current');
       } else if (event.target.id === 'menu' || event.target.className === 'home-button') {
+        removeCurrentClass();
         menu.render();
         menuItemMenu.classList.add('current');
       } else if (event.target.id === 'contacts') {
+        removeCurrentClass();
         contacts.render();
         menuItemContacts.classList.add('current');
       }
